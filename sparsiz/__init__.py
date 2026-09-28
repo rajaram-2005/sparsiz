@@ -17,7 +17,22 @@ MODEL→TEST→FAIL→UNDERSTAND FAILURE→GENERATE COUNTEREXAMPLE→GENERATE TR
 Objective: Every validated failure becomes permanent learning and evaluation signal
 """
 
-__version__ = "1.0.0-agi-omni-skills"
+__version__ = "1.1.0-agi-phone-omni"
+
+# New v1.1.0 — Phone AGI Replace Claude even on small phone online+local
+try:
+    from .mobile.quantization import PhoneQuantizationEngine, QuantizationConfig, QuantizedModel
+    from .mobile.distillation import PhoneDistillationEngine, DistilledModel
+    from .mobile.phone_agi import PhoneAGI, PhoneLocalAI, MobileHAL, PhoneSpecs, PhoneChip
+    from .deployment.phone_local_ai import PhoneLocalAI as PhoneLocalAI2, PhoneExecutionMode, PhoneLocalAIRegistry, PhoneModelRouter
+except ImportError:
+    PhoneQuantizationEngine = QuantizationConfig = QuantizedModel = None
+    PhoneDistillationEngine = DistilledModel = None
+    PhoneAGI = PhoneLocalAI = MobileHAL = PhoneSpecs = PhoneChip = None
+    PhoneLocalAI2 = PhoneExecutionMode = PhoneLocalAIRegistry = PhoneModelRouter = None
+
+# Previous version alias for compatibility
+__version__prev__ = "1.0.0-agi-omni-skills"
 
 # New v1.0.0 — All Fields in the World like Claude Skills Forever Use — 100+ Skills
 try:
@@ -158,4 +173,9 @@ __all__ = [
     # v1.0.0 Omni Skills — All Fields in the World like Claude Skills Forever Use
     "Skill","SkillDefinition","SkillCapability","SkillCategory","SafetyLevel",
     "SkillRegistry","SkillEngine","OmniSkills",
+    # v1.1.0 Phone Omni — Replace Claude even on small phone online+local
+    "PhoneQuantizationEngine","QuantizationConfig","QuantizedModel",
+    "PhoneDistillationEngine","DistilledModel",
+    "PhoneAGI","PhoneLocalAI","MobileHAL","PhoneSpecs","PhoneChip",
+    "PhoneLocalAI2","PhoneExecutionMode","PhoneLocalAIRegistry","PhoneModelRouter",
 ]
