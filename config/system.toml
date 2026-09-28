@@ -1,0 +1,46 @@
+system:
+  name = "the-last-dance"
+  mode = "research"
+
+rajaram:
+  security_level = "high"
+  audit = true
+
+makesh:
+  ebpf = true
+  thermal_monitoring = true
+  cpu_affinity = true
+
+saram:
+  encoder = "physics_autoencoder"
+  latent_dimension = 128
+
+faisanth:
+  routing = "adaptive"
+  topology = "compute_grid"
+  optimization = "constrained"
+
+premsoth:
+  verification = true
+  minimum_agents = 3
+  safety_gate = true
+
+hardware:
+  cpu = true
+  gpu = true
+  npu = false
+  quantum = false
+  neuromorphic = false
+
+[benchmark]
+latency_budget_ms = 20
+throughput_target = 1000
+energy_budget_j = 10000
+thermal_max_c = 85
+
+[security]
+ml_kem = true
+ml_dsa = true
+slh_dsa = true
+tpm = true
+secure_boot = true
