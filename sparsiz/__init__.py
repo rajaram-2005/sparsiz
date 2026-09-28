@@ -17,7 +17,19 @@ MODEL→TEST→FAIL→UNDERSTAND FAILURE→GENERATE COUNTEREXAMPLE→GENERATE TR
 Objective: Every validated failure becomes permanent learning and evaluation signal
 """
 
-__version__ = "1.1.0-agi-phone-omni"
+__version__ = "1.2.0-agi-datacenter-omni"
+
+# New v1.2.0 — Data-Center AGI High-End Models like Data-Centers
+try:
+    from .datacenter.quantization import DataCenterQuantizationEngine, DataCenterQuantizationConfig, DataCenterQuantizedModel
+    from .datacenter.scaling import DataCenterScalingEngine, DataCenterScaledModel, ParallelismType
+    from .datacenter.datacenter_agi import DataCenterAGI, DataCenterLocalAI, DataCenterHAL, DataCenterSpecs, DataCenterChip, DataCenterModel
+    from .deployment.datacenter_local_ai import DataCenterLocalAI as DataCenterLocalAI2, DataCenterExecutionMode, DataCenterLocalAIRegistry, DataCenterModelRouter
+except ImportError:
+    DataCenterQuantizationEngine = DataCenterQuantizationConfig = DataCenterQuantizedModel = None
+    DataCenterScalingEngine = DataCenterScaledModel = ParallelismType = None
+    DataCenterAGI = DataCenterLocalAI = DataCenterHAL = DataCenterSpecs = DataCenterChip = DataCenterModel = None
+    DataCenterLocalAI2 = DataCenterExecutionMode = DataCenterLocalAIRegistry = DataCenterModelRouter = None
 
 # New v1.1.0 — Phone AGI Replace Claude even on small phone online+local
 try:
@@ -32,7 +44,8 @@ except ImportError:
     PhoneLocalAI2 = PhoneExecutionMode = PhoneLocalAIRegistry = PhoneModelRouter = None
 
 # Previous version alias for compatibility
-__version__prev__ = "1.0.0-agi-omni-skills"
+__version__prev__ = "1.1.0-agi-phone-omni"
+__version__prev2__ = "1.0.0-agi-omni-skills"
 
 # New v1.0.0 — All Fields in the World like Claude Skills Forever Use — 100+ Skills
 try:
@@ -178,4 +191,9 @@ __all__ = [
     "PhoneDistillationEngine","DistilledModel",
     "PhoneAGI","PhoneLocalAI","MobileHAL","PhoneSpecs","PhoneChip",
     "PhoneLocalAI2","PhoneExecutionMode","PhoneLocalAIRegistry","PhoneModelRouter",
+    # v1.2.0 Data-Center Omni — High-End Models like Data-Centers
+    "DataCenterQuantizationEngine","DataCenterQuantizationConfig","DataCenterQuantizedModel",
+    "DataCenterScalingEngine","DataCenterScaledModel","ParallelismType",
+    "DataCenterAGI","DataCenterLocalAI","DataCenterHAL","DataCenterSpecs","DataCenterChip","DataCenterModel",
+    "DataCenterLocalAI2","DataCenterExecutionMode","DataCenterLocalAIRegistry","DataCenterModelRouter",
 ]

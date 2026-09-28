@@ -1,4 +1,4 @@
-"""Deployment — Local AI, Phone Local AI, online + local for phones"""
+"""Deployment — Local AI, Phone Local AI, Data-Center Local AI, high-end models"""
 try:
     from .local_ai import LocalAI, ExecutionMode
 except ImportError:
@@ -9,4 +9,9 @@ try:
 except ImportError:
     PhoneLocalAI2 = PhoneExecutionMode = PhoneLocalAIRegistry = PhoneModelRouter = None
 
-__all__ = ["LocalAI","ExecutionMode","PhoneLocalAI2","PhoneExecutionMode","PhoneLocalAIRegistry","PhoneModelRouter"]
+try:
+    from .datacenter_local_ai import DataCenterLocalAI, DataCenterExecutionMode, DataCenterLocalAIRegistry, DataCenterModelRouter
+except ImportError:
+    DataCenterLocalAI = DataCenterExecutionMode = DataCenterLocalAIRegistry = DataCenterModelRouter = None
+
+__all__ = ["LocalAI","ExecutionMode","PhoneLocalAI2","PhoneExecutionMode","PhoneLocalAIRegistry","PhoneModelRouter","DataCenterLocalAI","DataCenterExecutionMode","DataCenterLocalAIRegistry","DataCenterModelRouter"]
