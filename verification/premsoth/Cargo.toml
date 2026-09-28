@@ -1,0 +1,16 @@
+[package]
+name = "premsoth"
+version = "0.6.0"
+edition = "2021"
+description = "PREMSOTH - Verification / Policy, Consensus, Safety (The Last Dance)"
+license = "Unlicense"
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+tokio = { workspace = true }
+tracing = { workspace = true }
+uuid = { workspace = true }
+chrono = { workspace = true }

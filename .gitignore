@@ -1,0 +1,58 @@
+# Rust
+/target/
+**/target/
+Cargo.lock
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+.venv/
+venv/
+.env
+*.ipynb_checkpoints
+
+# eBPF
+*.bpf.o
+*.skel.h
+vmlinux.h
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Models
+models/*.pt
+models/*.pth
+models/*.onnx
+*.bin
+
+# Benchmarks output
+benchmarks/results/
+*.prof
+
+# Config local overrides
+config/local.toml
+
+# Prometheus
+prometheus_data/
+
+# KVM
+*.qcow2
+*.img

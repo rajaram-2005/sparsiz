@@ -1,0 +1,13 @@
+[package]
+name = "hal"
+version = "0.6.0"
+edition = "2021"
+description = "Hardware Abstraction Layer - HAL trait ComputeDevice (The Last Dance)"
+license = "Unlicense"
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+tracing = { workspace = true }
