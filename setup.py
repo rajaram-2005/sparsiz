@@ -2,8 +2,8 @@ from setuptools import setup, find_packages
 
 setup(
     name="sparsiz",
-    version="0.6.0",
-    description="The Last Dance — Omni-Kernel AI Architecture (Sparsiz research prototype)",
+    version="2.0.0",
+    description="The Last Dance — Omni-Kernel AI Architecture (Sparsiz research prototype) — Version 2 unified omni runtime",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     packages=find_packages(),
