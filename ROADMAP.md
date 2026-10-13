@@ -111,12 +111,17 @@ No claims of zero latency, error-free, <15μs without measurement.
 - v0.3.0: Phase 2 FAISANTH + Y-Bus
 - v0.4.0: Phase 3 Multi-Agent + Phase 4 PREMSOTH
 - v0.5.0: Phase 5 MAKESH + eBPF
-- v0.6.0: V1 Prototype End-to-End (this release)
-- v0.7.0: Hardware HAL CPU/GPU real
-- v0.8.0: BCI + Industrial interfaces
-- v0.9.0: KVM integration
-- v1.0.0: Stable research prototype with benchmarks
-- v2.0.0+: Custom kernel exploration
+- v0.6.0: V1 Prototype End-to-End [DONE]
+- v1.0.0: AGI Omni Skills — 100+ field skills, forever-use registry [DONE]
+- v1.1.0: Phone AGI — 10M-1B INT4, 5MB-0.5GB, offline+online [DONE]
+- v1.2.0: Data-Center AGI — 7B-1T MoE BF16/FP8, H100 x8-x64 [DONE]
+- v2.0.0: VERSION 2 — Unified Omni Runtime `sparsiz.v2` (this release) [DONE]
+  - One entry point OmniV2, tier auto-routing NANO_IOT 0.5MB → HYPERSCALE 100TB
+  - PREMSOTH-style release gate, hashed audit log, failure memory forever
+  - Release registry + compatibility rules (see CHANGELOG.md)
+- v2.1.0: Hardware HAL CPU/GPU real + BCI + Industrial interfaces
+- v2.2.0: KVM integration + benchmarks vs baselines
+- v3.0.0+: Custom kernel exploration (bare-metal)
 
 ## Contributing
 

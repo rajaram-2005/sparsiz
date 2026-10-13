@@ -17,9 +17,17 @@ MODEL→TEST→FAIL→UNDERSTAND FAILURE→GENERATE COUNTEREXAMPLE→GENERATE TR
 Objective: Every validated failure becomes permanent learning and evaluation signal
 """
 
-__version__ = "2.0-agi-50-year-roadmap"
+__version__ = "2.0.0"
+__codename__ = "omni-v2"
 
-# New v2.0 — 50-Year Roadmap — Check all backlogs in all current models of OpenAI and all and see feature of 50 years like that
+# New v2.0.0 — VERSION 2 — Unified Omni Runtime: one entry point, every tier (nano-IoT 0.5MB -> hyperscale 100TB)
+try:
+    from .v2 import OmniV2, DeviceTier, TierRouter, V2Result, detect_tier, V2Release, VERSION_HISTORY, compatible
+except ImportError:
+    OmniV2 = DeviceTier = TierRouter = V2Result = detect_tier = None
+    V2Release = VERSION_HISTORY = compatible = None
+
+# v2.0 — 50-Year Roadmap — Check all backlogs in all current models of OpenAI and all and see feature of 50 years like that
 # v1.2.0 — Data-Center AGI High-End Models like Data-Centers
 try:
     from .datacenter.quantization import DataCenterQuantizationEngine, DataCenterQuantizationConfig, DataCenterQuantizedModel
@@ -44,9 +52,11 @@ except ImportError:
     PhoneAGI = PhoneLocalAI = MobileHAL = PhoneSpecs = PhoneChip = None
     PhoneLocalAI2 = PhoneExecutionMode = PhoneLocalAIRegistry = PhoneModelRouter = None
 
-# Previous version alias for compatibility
-__version__prev__ = "1.1.0-agi-phone-omni"
-__version__prev2__ = "1.0.0-agi-omni-skills"
+# Previous version aliases for compatibility
+__version__prev__ = "2.0-agi-50-year-roadmap"
+__version__prev2__ = "1.2.0-agi-datacenter-omni"
+__version__prev3__ = "1.1.0-agi-phone-omni"
+__version__prev4__ = "1.0.0-agi-omni-skills"
 
 # New v1.0.0 — All Fields in the World like Claude Skills Forever Use — 100+ Skills
 try:
