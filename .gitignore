@@ -56,3 +56,6 @@ prometheus_data/
 # KVM
 *.qcow2
 *.img
+
+# Training run artifacts (software-only roadmap runs)
+training_runs/

@@ -29,6 +29,12 @@ from .release import (
     VERSION_HISTORY,
     compatible,
 )
+from .roadmap_trainer import (
+    FiftyYearTrainingRunner,
+    RoadmapEra,
+    FIFTY_YEAR_ERAS,
+    HARDWARE_PHASES_SKIPPED,
+)
 
 __all__ = [
     "OmniV2",
@@ -41,4 +47,8 @@ __all__ = [
     "VERSION",
     "VERSION_HISTORY",
     "compatible",
+    "FiftyYearTrainingRunner",
+    "RoadmapEra",
+    "FIFTY_YEAR_ERAS",
+    "HARDWARE_PHASES_SKIPPED",
 ]
